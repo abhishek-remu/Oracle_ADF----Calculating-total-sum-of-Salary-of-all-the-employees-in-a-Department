@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.abhishek.view" ClientType="Generic">
+  <pageMap>
+    <page path="/Emp-Table.jsf" usageId="com_abhishek_view_Emp_TablePageDef"/>
+    <page path="/Dept-Table.jsf" usageId="com_abhishek_view_Dept_TablePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_abhishek_view_Emp_TablePageDef" path="com.abhishek.view.pageDefs.EmpPageDef"/>
+    <page id="com_abhishek_view_Dept_TablePageDef" path="com.abhishek.view.pageDefs.DeptPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.abhishek.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
